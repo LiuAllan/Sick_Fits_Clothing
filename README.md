@@ -35,7 +35,7 @@ Full stack online clothing store with real credit checkout. Tested during develo
 - Custom server side logic
 - Charging credit cards with stripe
 - Send email
-- JWT Authentication
+- JWT Authentication (bcrypt)
 - Check permissions
 
 <b>Prisma</b>
