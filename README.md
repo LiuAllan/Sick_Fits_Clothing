@@ -59,6 +59,7 @@ JSON Web Token (JWT),
 Resolvers,
 Cache Management,
 Loading and Error States,
+Optimistic response for performance (displaying objects by anticipating what the server will return before it returns it)
 Sending Email,
 Logic and Flow with Async + Await,
 Authentication and Permissions,
