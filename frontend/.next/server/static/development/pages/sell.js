@@ -856,7 +856,7 @@ var _jsxFileName = "C:\\Users\\Alllan\\Documents\\GitHub\\Sick_Fits_Clothing\\fr
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n\tquery {\n\t\tme \n\t\t{\n\t\t\tid\n\t\t\temail\n\t\t\tname\n\t\t\tpermissions\n\t\t}\n\t}\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\tquery {\n\t\tme \n\t\t{\n\t\t\tid\n\t\t\temail\n\t\t\tname\n\t\t\tpermissions\n\t\t\tcart\n\t\t\t{\n\t\t\t\tid\n\t\t\t\tquantity\n\t\t\t\titem\n\t\t\t\t{\n\t\t\t\t\tid\n\t\t\t\t\tprice\n\t\t\t\t\timage\n\t\t\t\t\ttitle\n\t\t\t\t\tdescription\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -878,7 +878,7 @@ var User = function User(props) {
     query: CURRENT_USER_QUERY,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 33
     },
     __self: this
   }), function (payload) {

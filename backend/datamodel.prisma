@@ -33,6 +33,6 @@ type Item {
 type CartItem {
   id: ID! @id @unique
   quantity: Int! @default(value: 1)
-  item: Item! #relationshop to Item
+  item: Item #relationshop to Item
   user: User! #relationshop to User
 }

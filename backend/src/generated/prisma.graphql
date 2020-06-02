@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/wesbos/siccccccccck-fits/dev
-# timestamp: Thu Aug 16 2018 12:51:33 GMT-0400 (EDT)
+# timestamp: Tue Aug 21 2018 10:13:27 GMT-0400 (EDT)
 
 type AggregateCartItem {
   count: Int!
@@ -21,7 +21,7 @@ type BatchPayload {
 type CartItem implements Node {
   id: ID!
   quantity: Int!
-  item(where: ItemWhereInput): Item!
+  item(where: ItemWhereInput): Item
   user(where: UserWhereInput): User!
 }
 
@@ -37,7 +37,7 @@ type CartItemConnection {
 
 input CartItemCreateInput {
   quantity: Int
-  item: ItemCreateOneInput!
+  item: ItemCreateOneInput
   user: UserCreateOneWithoutCartInput!
 }
 
@@ -48,7 +48,7 @@ input CartItemCreateManyWithoutUserInput {
 
 input CartItemCreateWithoutUserInput {
   quantity: Int
-  item: ItemCreateOneInput!
+  item: ItemCreateOneInput
 }
 
 """An edge in a connection."""
@@ -356,6 +356,7 @@ input ItemUpdateInput {
 input ItemUpdateOneInput {
   create: ItemCreateInput
   connect: ItemWhereUniqueInput
+  disconnect: Boolean
   delete: Boolean
   update: ItemUpdateDataInput
   upsert: ItemUpsertNestedInput
