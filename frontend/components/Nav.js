@@ -30,7 +30,7 @@ const Nav = () => (
 							</Link>
 
 							{/*<Link href="/permissions">*/}
-							<Link href="/me">
+							<Link href="/permissions">
 								<a>Account</a>
 							</Link>
 

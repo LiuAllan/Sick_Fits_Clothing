@@ -36,3 +36,24 @@ type CartItem {
   item: Item #relationshop to Item
   user: User! #relationshop to User
 }
+
+type OrderItem {
+  id: ID! @id @unique
+  title: String!
+  description: String!
+  image: String!
+  largeImage: String!
+  price: Int!
+  quantity: Int! @default(value: 1)
+  user: User
+}
+
+type Order {
+  id: ID! @id @unqiue
+  items: [OrderItem!]!
+  total: Int!
+  user: User!
+  charge: String!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
