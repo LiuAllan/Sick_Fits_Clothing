@@ -17,8 +17,6 @@ const REQUEST_RESET_MUTATION = gql`
 export default class RequestReset extends React.Component
 {
 	state = {
-		name:'',
-		password: '',
 		email: '',
 	};
 	//Handle the state when user clicks on the input box. Function saveToState with paramets (event)
@@ -47,7 +45,6 @@ export default class RequestReset extends React.Component
 					<fieldset disabled={loading} aria-busy={loading}>
 						<h2>Request a password reset</h2>
 						<Error error={error} />
-
 						{!error && !loading && called && <p>Check your email for a reset link</p>}
 						<label htmlFor="email">
 							Email

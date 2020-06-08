@@ -58,7 +58,7 @@ export default class CreateItem extends React.Component
 		});
 
 	    const file = await res.json();
-	    console.log(file);
+	    // console.log(file);
 	    this.setState({
 	      image: file.secure_url,
 	      largeImage: file.eager[0].secure_url,
@@ -76,7 +76,7 @@ export default class CreateItem extends React.Component
 						// call the mutation
 						const response = await createItem();
 						// change to single item page
-						console.log(response);
+						// console.log(response);
 						Router.push({
 							pathname: '/item',
 							query: { id: response.data.createItem.id },

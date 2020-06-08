@@ -1411,7 +1411,7 @@ type User implements Node {
   email: String!
   password: String!
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: [Permission!]!
   cart(where: CartItemWhereInput, orderBy: CartItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [CartItem!]
 }
@@ -1431,7 +1431,7 @@ input UserCreateInput {
   email: String!
   password: String!
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserCreatepermissionsInput
   cart: CartItemCreateManyWithoutUserInput
 }
@@ -1455,7 +1455,7 @@ input UserCreateWithoutCartInput {
   email: String!
   password: String!
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserCreatepermissionsInput
 }
 
@@ -1493,7 +1493,7 @@ type UserPreviousValues {
   email: String!
   password: String!
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: [Permission!]!
 }
 
@@ -1541,7 +1541,7 @@ input UserUpdateDataInput {
   email: String
   password: String
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserUpdatepermissionsInput
   cart: CartItemUpdateManyWithoutUserInput
 }
@@ -1551,7 +1551,7 @@ input UserUpdateInput {
   email: String
   password: String
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserUpdatepermissionsInput
   cart: CartItemUpdateManyWithoutUserInput
 }
@@ -1581,7 +1581,7 @@ input UserUpdateWithoutCartDataInput {
   email: String
   password: String
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserUpdatepermissionsInput
 }
 
@@ -1804,7 +1804,7 @@ input UserWhereInput {
 
   """All values not ending with the given string."""
   resetToken_not_ends_with: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
 
   """All values that are not equal to given value."""
   resetTokenExpiry_not: String
@@ -1825,7 +1825,7 @@ input UserWhereInput {
   resetTokenExpiry_gt: String
 
   """All values greater than or equal the given value."""
-  resetTokenExpiry_gte: String
+  resetTokenExpiry_gte: Float
 
   """All values containing the given string."""
   resetTokenExpiry_contains: String
