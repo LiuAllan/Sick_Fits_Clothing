@@ -1,7 +1,8 @@
 # Sick_Fits_Clothing
 
 Full stack online clothing store with real credit checkout. Tested during development.
-View Deployed project at https://sickfits-allan-react-prod.herokuapp.com/
+
+View deployed project at https://sickfits-allan-react-prod.herokuapp.com/
 
 <h1>Functions:</h1>
 
