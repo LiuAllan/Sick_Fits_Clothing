@@ -20,7 +20,7 @@ export default class RequestReset extends React.Component
 		email: '',
 	};
 	//Handle the state when user clicks on the input box. Function saveToState with paramets (event)
-	saveToState = (event) =>
+	saveToState = event =>
 	{
 		this.setState({ [event.target.name]: event.target.value });
 	}
@@ -35,7 +35,8 @@ export default class RequestReset extends React.Component
 				>
 				{(reset, { error, loading, called }) => {
 				return(<Form 
-					method="post" 
+					method="post"
+					data-test="form"
 					onSubmit={async event => {
 						event.preventDefault();
 						await reset();
@@ -65,3 +66,5 @@ export default class RequestReset extends React.Component
 		);
 	}
 }
+
+export { REQUEST_RESET_MUTATION };
